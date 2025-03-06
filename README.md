@@ -1,26 +1,37 @@
 # PyCommerce
 Simulação de E-commerce em Python
 
-Este projeto simula um modelo básico de e-commerce, desenvolvido em Python, com funcionalidades essenciais para um sistema de compras online. O objetivo principal é criar um protótipo funcional que permita a interação com o cadastro de clientes, a visualização de produtos e a realização de pagamentos.
+Este é um programa simples de e-commerce desenvolvido em Python. Ele permite que os clientes se cadastrem, visualizem produtos e realizem compras, com a opção de pagamento via Cartão de Crédito ou Boleto Bancário. O código foi projetado para aplicar os conceitos fundamentais de um sistema de compras online, utilizando manipulação de dados em memória (sem integração com banco de dados) e interação por meio do terminal.
 
-Funcionalidades Implementadas:
-Cadastro de Clientes: Sistema que permite o cadastro de novos clientes, com informações como nome, endereço e e-mail, garantindo a personalização da experiência de compra.
+Funcionalidades
 
-Listagem de Produtos: Exibição de um catálogo de produtos disponíveis, com detalhes como nome, descrição, preço e quantidade em estoque.
+1. Cadastro de Clientes: O programa permite que os clientes se cadastrem informando nome, e-mail e endereço. Após o cadastro, o cliente será adicionado à lista de clientes.
 
-Métodos de Pagamento: Implementação de diferentes formas de pagamento, como cartão de crédito e boleto bancário, simulando o processo de checkout e confirmação de pagamento.
+2. Exibição de Produtos: A lista de produtos disponíveis para venda é exibida com informações como ID, nome, descrição, preço e quantidade disponível em estoque.
 
-Tecnologias Utilizadas:
-Python: Linguagem de programação principal do projeto.
+3. Realização de Compras: O cliente pode escolher um produto, informar a quantidade desejada e o sistema calcula o valor total da compra. Caso o estoque seja suficiente, a compra prossegue para a escolha do método de pagamento.
 
-Estrutura do Projeto:
-Cadastro de Clientes: Função para adicionar novos clientes ao banco de dados, além de permitir a atualização e remoção de dados.
-Catálogo de Produtos: Listagem e detalhamento dos produtos cadastrados no sistema.
-Simulação de Checkout: Processamento de compras, incluindo a escolha do método de pagamento e a geração de um resumo de compras.
+4. Método de Pagamento: O cliente pode escolher entre duas formas de pagamento:
 
-Objetivos Futuros:
-Implementação de Carrinho de Compras: Criar um sistema para adicionar produtos ao carrinho e simular o processo de finalização da compra.
-Autenticação de Usuário: Adicionar um sistema de login e autenticação para que clientes possam gerenciar suas compras e preferências.
-Integração com APIs de Pagamento: Simular ou integrar com APIs de pagamento reais para simular transações financeiras.
+ - Cartão de Crédito: O pagamento será realizado diretamente.
+ - Boleto Bancário: Um boleto será gerado.
 
-# Este projeto tem como principal objetivo a aplicação prática de conceitos de programação e desenvolvimento de sistemas, com ênfase na criação de soluções escaláveis e eficientes.
+5. Menu de Navegação: O programa oferece um menu com as opções de cadastrar cliente, realizar compras ou sair do sistema.
+
+Estrutura do Código
+
+ - Clientes: Lista que armazena os dados dos clientes cadastrados.
+ - Produtos: Lista de produtos disponíveis para venda. Cada produto é representado por um dicionário com informações como ID, nome, descrição, preço e quantidade em estoque.
+
+Funções principais:
+
+- Cadastrar_cliente: Permite o cadastro de novos clientes.
+- Listar_produtos: Exibe os produtos disponíveis para compra.
+- Realizar_compra: Lida com o processo de compra de produtos, verificando estoque e calculando o valor total.
+- Metodo_pagamento: Processa o pagamento, oferecendo duas opções: Cartão de Crédito ou Boleto Bancário.
+- Menu: Controla o fluxo do programa, exibindo as opções e executando as funções apropriadas.
+
+Observações
+- O programa mantém os dados dos clientes e produtos em memória durante a execução, portanto, após o programa ser fechado, as informações são perdidas.
+- A validação de entradas de dados é simples, sem verificação de erros complexos (como e-mails ou endereços inválidos).
+- Não há integração com bancos de dados ou sistemas externos de pagamento.
